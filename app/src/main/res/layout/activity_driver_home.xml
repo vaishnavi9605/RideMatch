@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/velocity_bg_light">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- HEADER CARD WITH LOGO & STATUS -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_card_rounded"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="16dp"
+            android:elevation="2dp">
+
+            <ImageView
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:contentDescription="VeloCity Driver Logo"
+                android:src="@drawable/ic_velocity_logo" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="14dp">
+
+                <TextView
+                    android:id="@+id/tvDriverWelcome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Driver Dashboard 🚕"
+                    android:textColor="@color/velocity_text_title"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvOnlineStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Status: OFFLINE 🔴"
+                    android:textColor="@color/velocity_status_offline"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="2dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- VERIFIED DRIVER CREDENTIALS CARD -->
+        <LinearLayout
+            android:id="@+id/cardDriverVerification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_badge_online"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:elevation="2dp"
+            android:layout_marginTop="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tvDriverBadge"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="🟢 VERIFIED DRIVER"
+                    android:textColor="#008822"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvDriverPhoneDisplay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📞 +91 98765 43210"
+                    android:textColor="@color/velocity_text_title"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvDriverLicenceDisplay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="🪪 Licence: DL-1420110012345 • RC: RC-MH12-9876"
+                android:textColor="@color/velocity_text_title"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tvDriverVehicleDisplay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="🚕 Vehicle: Swift Dzire (MH-12 AB 1234)"
+                android:textColor="@color/velocity_text_body"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <!-- ONLINE TOGGLE CARD -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_card_rounded"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:elevation="2dp"
+            android:layout_marginTop="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Driver Availability"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/velocity_text_title" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Go online to start receiving ride requests nearby."
+                android:textColor="@color/velocity_text_body"
+                android:textSize="13sp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="16dp" />
+
+            <Button
+                android:id="@+id/btnOnline"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:background="@drawable/bg_btn_accent"
+                android:text="GO ONLINE 🟢"
+                android:textColor="#FFFFFF"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:textAllCaps="false" />
+
+            <TextView
+                android:id="@+id/tvActivePreferencesSummary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_input_field"
+                android:padding="10dp"
+                android:text="⚙️ Active Preferences: Min Fare ₹0 • Max Pickup 10km"
+                android:textColor="@color/velocity_primary"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnFilters"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_btn_primary"
+                android:text="⚙️  Ride Preferences &amp; Filters"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btnDriverHistory"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_card_rounded"
+                android:text="📜 Driver Trip History"
+                android:textColor="@color/velocity_primary"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textAllCaps="false" />
+
+        </LinearLayout>
+
+        <!-- EARNINGS CARD -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_card_rounded"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:elevation="2dp"
+            android:layout_marginTop="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Today's Earnings 💰"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/velocity_text_title" />
+
+            <TextView
+                android:id="@+id/tvEarnings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="₹0"
+                android:textColor="@color/velocity_primary"
+                android:textSize="36sp"
+                android:textStyle="bold"
+                android:layout_marginTop="6dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rating: 4.9 ★  |  Rides Today: 0"
+                android:textColor="@color/velocity_text_body"
+                android:textSize="13sp"
+                android:layout_marginTop="4dp" />
+
+        </LinearLayout>
+
+        <!-- LOGOUT BUTTON -->
+        <Button
+            android:id="@+id/btnDriverLogout"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_card_rounded"
+            android:text="Logout"
+            android:textColor="@color/velocity_status_offline"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textAllCaps="false" />
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Scaled down and centered VeloCity Logo -->
+    <group
+        android:scaleX="0.38"
+        android:scaleY="0.38"
+        android:translateX="16"
+        android:translateY="16">
+
+        <!-- Speed Lines -->
+        <path
+            android:pathData="M 18,62 H 52 C 55,62 57,64 57,67 C 57,70 55,72 52,72 H 18 C 15,72 13,70 13,67 C 13,64 15,62 18,62 Z"
+            android:fillColor="#0072FF" />
+        <path
+            android:pathData="M 24,77 H 58 C 61,77 63,79 63,82 C 63,85 61,87 58,87 H 24 C 21,87 19,85 19,82 C 19,79 21,77 24,77 Z"
+            android:fillColor="#0088FF" />
+        <path
+            android:pathData="M 30,92 H 62 C 65,92 67,94 67,97 C 67,100 65,102 62,102 H 30 C 27,102 25,100 25,97 C 25,94 27,92 30,92 Z"
+            android:fillColor="#0099FF" />
+
+        <!-- Left Arm V -->
+        <path
+            android:pathData="M 17,56 C 25,56 45,56 60,56 C 72,56 82,75 92,102 C 102,129 108,160 108,160 L 91,160 C 80,135 65,95 50,70 C 40,56 22,56 17,56 Z">
+            <aapt:attr name="android:fillColor">
+                <gradient
+                    android:startX="17"
+                    android:startY="56"
+                    android:endX="108"
+                    android:endY="160"
+                    android:type="linear">
+                    <item android:offset="0.0" android:color="#00A2FF"/>
+                    <item android:offset="0.5" android:color="#0066FF"/>
+                    <item android:offset="1.0" android:color="#0033B2"/>
+                </gradient>
+            </aapt:attr>
+        </path>
+
+        <!-- Right Arm V (Road Ribbon) -->
+        <path
+            android:pathData="M 108,160 C 108,160 120,172 132,165 C 148,155 168,110 180,82 C 182,78 180,72 175,70 L 160,65 C 158,64 155,66 153,69 C 142,95 125,130 115,142 C 108,150 95,152 91,160 Z">
+            <aapt:attr name="android:fillColor">
+                <gradient
+                    android:startX="108"
+                    android:startY="160"
+                    android:endX="180"
+                    android:endY="65"
+                    android:type="linear">
+                    <item android:offset="0.0" android:color="#D50000"/>
+                    <item android:offset="0.4" android:color="#FF3D00"/>
+                    <item android:offset="1.0" android:color="#FF9100"/>
+                </gradient>
+            </aapt:attr>
+        </path>
+
+        <!-- Road Surface -->
+        <path
+            android:pathData="M 97,155 C 100,158 108,162 115,155 C 127,144 145,108 156,82 L 146,78 C 136,102 119,136 108,145 C 103,149 98,151 97,155 Z"
+            android:fillColor="#263238" />
+
+        <!-- Center Dashes -->
+        <path
+            android:pathData="M 104,154 L 108,149 M 113,142 L 118,135 M 123,127 L 128,120 M 133,112 L 138,105 M 143,97 L 147,90"
+            android:strokeColor="#FFFFFF"
+            android:strokeWidth="2.5"
+            android:strokeLineCap="round" />
+
+        <!-- Pin -->
+        <path
+            android:pathData="M 160,30 C 148,30 138,40 138,52 C 138,68 160,95 160,95 C 160,95 182,68 182,52 C 182,40 172,30 160,30 Z">
+            <aapt:attr name="android:fillColor">
+                <gradient
+                    android:startX="138"
+                    android:startY="30"
+                    android:endX="182"
+                    android:endY="95"
+                    android:type="linear">
+                    <item android:offset="0.0" android:color="#FFB300"/>
+                    <item android:offset="0.6" android:color="#FF6D00"/>
+                    <item android:offset="1.0" android:color="#DD2C00"/>
+                </gradient>
+            </aapt:attr>
+        </path>
+
+        <path
+            android:pathData="M 160,52 m -8,0 a 8,8 0 1,0 16,0 a 8,8 0 1,0 -16,0"
+            android:fillColor="#FFFFFF" />
+
+    </group>
+</vector>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bg_card_rounded"
+    android:padding="16dp"
+    android:layout_marginBottom="12dp"
+    android:elevation="2dp">
+
+    <!-- TOP HEADER: DATE & STATUS BADGE -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="10dp">
+
+        <TextView
+            android:id="@+id/tvRideDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="📅 Oct 2, 2026 • 08:30 PM"
+            android:textColor="@color/velocity_text_title"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvRideStatusBadge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_badge_online"
+            android:text="Completed 🟢"
+            android:textColor="#008822"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#EEEEEE"
+        android:layout_marginBottom="10dp" />
+
+    <!-- PICKUP LOCATION -->
+    <TextView
+        android:id="@+id/tvHistoryPickup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="📍 Pickup: Swargate, Pune"
+        android:textColor="@color/velocity_text_title"
+        android:textSize="14sp"
+        android:layout_marginBottom="6dp" />
+
+    <!-- DESTINATION LOCATION -->
+    <TextView
+        android:id="@+id/tvHistoryDestination"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="🔴 Destination: Shivajinagar, Pune"
+        android:textColor="@color/velocity_text_title"
+        android:textSize="14sp"
+        android:layout_marginBottom="10dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#EEEEEE"
+        android:layout_marginBottom="10dp" />
+
+    <!-- DETAILS ROW: FARE, DISTANCE, PERSON & RATING -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tvHistoryFare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="💰 ₹150"
+            android:textColor="@color/velocity_primary"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvHistoryDistance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:text="🛣 5.2 km"
+            android:textColor="@color/velocity_text_title"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tvHistoryPerson"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="14dp"
+            android:text="👤 Driver: Rahul"
+            android:textColor="@color/velocity_text_title"
+            android:textSize="13sp"
+            android:ellipsize="end"
+            android:maxLines="1" />
+
+        <TextView
+            android:id="@+id/tvHistoryRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="⭐ 5.0"
+            android:textColor="@color/velocity_accent_orange"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</LinearLayout>

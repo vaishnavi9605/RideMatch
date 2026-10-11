@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/velocity_bg_light">
+
+    <!-- MAP -->
+    <org.maplibre.android.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- TOP FLOATING SEARCH PANEL -->
+    <LinearLayout
+        android:id="@+id/locationSelectionPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:layout_margin="12dp"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@drawable/bg_card_rounded"
+        android:elevation="8dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📍 Pickup location"
+            android:textStyle="bold"
+            android:textSize="13sp"
+            android:textColor="@color/velocity_primary" />
+
+        <EditText
+            android:id="@+id/etPickupSearch"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_marginTop="4dp"
+            android:hint="Search pickup..."
+            android:singleLine="true"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:textSize="14sp"
+            android:inputType="textCapSentences"
+            android:background="@drawable/bg_input_field" />
+
+        <ListView
+            android:id="@+id/lvPickupResults"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxHeight="200dp"
+            android:visibility="gone"
+            android:background="#FFFFFF"
+            android:divider="#E2E8F0"
+            android:dividerHeight="1dp"
+            android:elevation="6dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="🔴 Destination"
+            android:textStyle="bold"
+            android:textSize="13sp"
+            android:textColor="@color/velocity_accent_orange" />
+
+        <EditText
+            android:id="@+id/etDestinationSearch"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_marginTop="4dp"
+            android:hint="Search destination..."
+            android:singleLine="true"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:textSize="14sp"
+            android:inputType="textCapSentences"
+            android:background="@drawable/bg_input_field" />
+
+        <ListView
+            android:id="@+id/lvDestinationResults"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxHeight="200dp"
+            android:visibility="gone"
+            android:background="#FFFFFF"
+            android:divider="#E2E8F0"
+            android:dividerHeight="1dp"
+            android:elevation="6dp" />
+
+        <TextView
+            android:id="@+id/tvSelectionTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Select pickup and destination"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:textColor="@color/velocity_text_title" />
+
+        <TextView
+            android:id="@+id/tvPickup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="📍 Pickup: Not selected"
+            android:textSize="12sp"
+            android:textColor="@color/velocity_text_body" />
+
+        <TextView
+            android:id="@+id/tvDestination"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="🔴 Destination: Not selected"
+            android:textSize="12sp"
+            android:textColor="@color/velocity_text_body" />
+
+        <TextView
+            android:id="@+id/tvRouteInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="Route: Not calculated"
+            android:textStyle="bold"
+            android:textSize="13sp"
+            android:textColor="@color/velocity_status_online" />
+
+        <!-- DRIVER DETAILS CARD -->
+        <LinearLayout
+            android:id="@+id/cardDriverDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:padding="12dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_badge_online">
+
+            <TextView
+                android:id="@+id/tvDriverStatusHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🟢 Ride Accepted! Driver on the way"
+                android:textColor="#065F46"
+                android:textStyle="bold"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvDriverName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="👤 Driver: Loading..."
+                android:textColor="@color/velocity_text_title"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvVehicleDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="🚕 Vehicle: MH-12 VeloCity Cab"
+                android:textColor="@color/velocity_text_body"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tvDriverEta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="⏱ Expected Arrival: ~3 mins"
+                android:textColor="@color/velocity_primary"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvDriverPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="📞 Phone: +91 98765 43210"
+                android:textColor="@color/velocity_text_body"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/btnCallDriver"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_btn_primary"
+                android:text="📞 CALL DRIVER"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp" />
+
+        </LinearLayout>
+
+        <!-- CUSTOMER DETAILS CARD (FOR DRIVER MODE) -->
+        <LinearLayout
+            android:id="@+id/cardCustomerDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:padding="12dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_badge_online">
+
+            <TextView
+                android:id="@+id/tvCustomerName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="👤 Customer: John Doe"
+                android:textColor="@color/velocity_text_title"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvCustomerPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="📞 Phone: +91 98765 43210"
+                android:textColor="@color/velocity_text_body"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/btnCallCustomer"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_btn_accent"
+                android:text="📞 CALL CUSTOMER"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- BOTTOM FLOATING CONTROLS PANEL -->
+    <LinearLayout
+        android:id="@+id/bottomControls"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_margin="12dp"
+        android:orientation="vertical"
+        android:padding="14dp"
+        android:background="@drawable/bg_card_rounded"
+        android:elevation="8dp">
+
+        <Button
+            android:id="@+id/btnUseCurrentLocation"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/bg_btn_primary"
+            android:text="📍  Use Current Location as Pickup"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btnSelectDestination"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_card_rounded"
+            android:text="📌  Select Destination on Map"
+            android:textColor="@color/velocity_primary"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btnConfirmLocations"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_btn_accent"
+            android:text="✓  CONFIRM RIDE &amp; BOOK"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btnClearLocations"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/bg_card_rounded"
+            android:text="CLEAR LOCATIONS"
+            android:textColor="@color/velocity_text_body"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:textAllCaps="false" />
+
+    </LinearLayout>
+
+    <!-- FAB MY LOCATION -->
+    <ImageButton
+        android:id="@+id/fabMyLocation"
+        android:layout_width="54dp"
+        android:layout_height="54dp"
+        android:layout_gravity="center_vertical|end"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/bg_card_rounded"
+        android:contentDescription="@string/current_location"
+        android:elevation="8dp"
+        android:padding="12dp"
+        android:scaleType="fitCenter"
+        android:src="@android:drawable/ic_menu_mylocation" />
+
+</FrameLayout>

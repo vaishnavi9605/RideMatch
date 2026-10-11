@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">VeloCity</string>
+    <string name="welcome_customer">Welcome to VeloCity 👋</string>
+    <string name="where_to_go">Where do you want to go?</string>
+    <string name="pickup_location">Pickup location</string>
+    <string name="destination">Destination</string>
+    <string name="find_a_ride">Find a Ride 🚕</string>
+    <string name="open_map">Open Map 🗺️</string>
+    <string name="logout">Logout</string>
+    <string name="current_location">Current Location</string>
+</resources>

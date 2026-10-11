@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "291308703235",
+    "project_id": "ridematch-65867",
+    "storage_bucket": "ridematch-65867.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:291308703235:android:c82a9c3e47b881d55ac836",
+        "android_client_info": {
+          "package_name": "com.example.ridematch"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZM0EGICZMUYEd7RaaS1TjeVAxoSA_u3Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

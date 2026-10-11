@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/velocity_bg_light">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="24dp">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:contentDescription="Logo"
+            android:src="@drawable/ic_velocity_logo" />
+
+        <TextView
+            android:id="@+id/tvRole"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Registration"
+            android:textColor="@color/velocity_text_title"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create your VeloCity account"
+            android:textColor="@color/velocity_text_body"
+            android:textSize="13sp"
+            android:layout_marginBottom="20dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_card_rounded"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:elevation="2dp">
+
+            <!-- FULL NAME -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Full Name"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="@color/velocity_text_title" />
+
+            <EditText
+                android:id="@+id/etName"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="6dp"
+                android:background="@drawable/bg_input_field"
+                android:hint="John Doe"
+                android:inputType="textPersonName"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:textSize="14sp" />
+
+            <!-- MOBILE PHONE NUMBER -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:text="Mobile Phone Number"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="@color/velocity_text_title" />
+
+            <EditText
+                android:id="@+id/etPhone"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="6dp"
+                android:background="@drawable/bg_input_field"
+                android:hint="+91 98765 43210"
+                android:inputType="phone"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:textSize="14sp" />
+
+            <!-- EMAIL -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:text="Email Address"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="@color/velocity_text_title" />
+
+            <EditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="6dp"
+                android:background="@drawable/bg_input_field"
+                android:hint="john@example.com"
+                android:inputType="textEmailAddress"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:textSize="14sp" />
+
+            <!-- PASSWORD -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:text="Password (min 6 chars)"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="@color/velocity_text_title" />
+
+            <EditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="6dp"
+                android:background="@drawable/bg_input_field"
+                android:hint="••••••••"
+                android:inputType="textPassword"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:textSize="14sp" />
+
+            <!-- DRIVER VERIFICATION DOCUMENTS SECTION -->
+            <LinearLayout
+                android:id="@+id/layoutDriverVerification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#E2E8F0"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginBottom="14dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📄 DRIVER VERIFICATION DOCUMENTS"
+                    android:textColor="@color/velocity_primary"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <!-- AADHAAR / GOVT ID PROOF -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="Govt ID Proof / Aadhaar Number"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/velocity_text_title" />
+
+                <EditText
+                    android:id="@+id/etIdProof"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="6dp"
+                    android:background="@drawable/bg_input_field"
+                    android:hint="1234 5678 9012"
+                    android:inputType="number"
+                    android:paddingStart="14dp"
+                    android:paddingEnd="14dp"
+                    android:textSize="14sp" />
+
+                <!-- DRIVING LICENCE NUMBER -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:text="Driving Licence Number"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/velocity_text_title" />
+
+                <EditText
+                    android:id="@+id/etLicenceNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="6dp"
+                    android:background="@drawable/bg_input_field"
+                    android:hint="DL-1420110012345"
+                    android:inputType="textCapCharacters"
+                    android:paddingStart="14dp"
+                    android:paddingEnd="14dp"
+                    android:textSize="14sp" />
+
+                <!-- VEHICLE MODEL -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:text="Vehicle Model &amp; Color"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/velocity_text_title" />
+
+                <EditText
+                    android:id="@+id/etVehicleModel"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="6dp"
+                    android:background="@drawable/bg_input_field"
+                    android:hint="Maruti Suzuki Swift Dzire (White)"
+                    android:inputType="textCapWords"
+                    android:paddingStart="14dp"
+                    android:paddingEnd="14dp"
+                    android:textSize="14sp" />
+
+                <!-- VEHICLE PLATE NUMBER -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:text="Vehicle Registration Plate Number"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/velocity_text_title" />
+
+                <EditText
+                    android:id="@+id/etVehicleNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="6dp"
+                    android:background="@drawable/bg_input_field"
+                    android:hint="MH-12 AB 1234"
+                    android:inputType="textCapCharacters"
+                    android:paddingStart="14dp"
+                    android:paddingEnd="14dp"
+                    android:textSize="14sp" />
+
+                <!-- VEHICLE RC CARD NUMBER -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:text="Vehicle RC Card Registration Number"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/velocity_text_title" />
+
+                <EditText
+                    android:id="@+id/etRcNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="6dp"
+                    android:background="@drawable/bg_input_field"
+                    android:hint="RC-MH12-2023-987654"
+                    android:inputType="textCapCharacters"
+                    android:paddingStart="14dp"
+                    android:paddingEnd="14dp"
+                    android:textSize="14sp" />
+
+                <!-- DRIVER PHOTO URL / LINK -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:text="Driver Photo Link / URL (Optional)"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/velocity_text_title" />
+
+                <EditText
+                    android:id="@+id/etPhotoUrl"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="6dp"
+                    android:background="@drawable/bg_input_field"
+                    android:hint="https://example.com/driver-photo.jpg"
+                    android:inputType="textUri"
+                    android:paddingStart="14dp"
+                    android:paddingEnd="14dp"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnRegister"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/bg_btn_primary"
+                android:text="Create Account"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textAllCaps="false" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

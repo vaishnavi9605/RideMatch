@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Internet access for MapLibre map data -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.VeloCity">
+
+        <!-- Main / Launcher -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+
+        <!-- Registration -->
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false" />
+
+        <!-- Login -->
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+
+        <!-- Customer Dashboard -->
+        <activity
+            android:name=".CustomerHomeActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- Driver Dashboard -->
+        <activity
+            android:name=".DriverHomeActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- Driver Ride Preferences -->
+        <activity
+            android:name=".DriverFilterActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- RideMap -->
+        <activity
+            android:name=".RideMapActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- Ride History -->
+        <activity
+            android:name=".RideHistoryActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+    </application>
+
+</manifest>

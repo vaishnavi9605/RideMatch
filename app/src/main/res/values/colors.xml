@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="velocity_primary">#0066FF</color>
+    <color name="velocity_primary_dark">#0040A8</color>
+    <color name="velocity_primary_container">#EBF3FF</color>
+
+    <color name="velocity_accent_orange">#FF6D00</color>
+    <color name="velocity_accent_cyan">#00D2FF</color>
+    <color name="velocity_accent_red">#D50000</color>
+
+    <color name="velocity_bg_light">#F5F7FA</color>
+    <color name="velocity_card_surface">#FFFFFF</color>
+
+    <color name="velocity_text_title">#0F172A</color>
+    <color name="velocity_text_body">#475569</color>
+
+    <color name="velocity_status_online">#10B981</color>
+    <color name="velocity_status_offline">#EF4444</color>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>
